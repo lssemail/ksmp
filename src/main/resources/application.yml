@@ -1,0 +1,32 @@
+#Thymeleaf模板默认缓存为true
+spring:
+  thymeleaf:
+    cache: false
+
+  freemarker:
+    cache: false
+
+  profiles:
+    active: production
+
+#  datasource:
+#    url: jdbc:mysql://localhost/ksmp
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8080
+
+
+
+logging:
+  path: /Users/shuai/work/logs/
+  file: BookWorm.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: INFO
+
+
