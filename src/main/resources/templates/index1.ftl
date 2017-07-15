@@ -34,7 +34,7 @@
                 <li class="layui-nav-item"><a href="">社区</a></li>
             </ul>
         </div>
-        <div style="width: 12%; float: left">
+        <div>
             <ul class="layui-nav layui-nav-tree" lay-filter="demo">
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">默认展开</a>
@@ -56,25 +56,6 @@
                 <li class="layui-nav-item"><a href="">云市场</a></li>
                 <li class="layui-nav-item"><a href="">社区</a></li>
             </ul>
-        </div>
-        <div style="width: 87%; float: left;">
-            <div class="layui-tab layui-tab-card" lay-filter="demo" style="height: 700px;">
-                <ul class="layui-tab-title">
-                    <li class="layui-this">演示说明</li>
-                    <li>标题一</li>
-                    <li>标题二</li>
-                    <li>标题三</li>
-                </ul>
-                <div class="layui-tab-content">
-                    <div class="layui-tab-item layui-show">
-                        在这里，你将以最直观的形式体验Layui！在编辑器中可以执行layui相关的一切代码。
-                        <br>你也可以点击左侧导航针对性地试验我们提供的示例。
-                    </div>
-                    <div class="layui-tab-item">内容1</div>
-                    <div class="layui-tab-item">内容2</div>
-                    <div class="layui-tab-item">内容3</div>
-                </div>
-            </div>
         </div>
     </div>
 </body>
