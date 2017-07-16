@@ -1,93 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>layui</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="/lib/layui/css/layui.css" rel="stylesheet" media="all">
+	<meta charset="utf-8">
+	<title>layui后台管理模板</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+	<link rel="stylesheet" href="/css/main.css" media="all" />
 </head>
-<body>
-    <div class="content">
-        <div>
-            <ul class="layui-nav">
-                <li class="layui-nav-item"><a href="">最新活动</a></li>
-                <li class="layui-nav-item layui-this">
-                    <a href="javascript:;">产品</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">选项1</a></dd>
-                        <dd><a href="">选项2</a></dd>
-                        <dd><a href="">选项3</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">大数据</a></li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">移动模块</a></dd>
-                        <dd><a href="">后台模版</a></dd>
-                        <dd class="layui-this"><a href="">选中项</a></dd>
-                        <dd><a href="">电商平台</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">社区</a></li>
-            </ul>
-        </div>
-        <div style="width: 12%; float: left">
-            <ul class="layui-nav layui-nav-tree" lay-filter="demo">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">默认展开</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">选项一</a></dd>
-                        <dd><a href="javascript:;">选项二</a></dd>
-                        <dd><a href="javascript:;">选项三</a></dd>
-                        <dd><a href="">跳转项</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="">移动模块</a></dd>
-                        <dd><a href="">后台模版</a></dd>
-                        <dd><a href="">电商平台</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">社区</a></li>
-            </ul>
-        </div>
-        <div style="width: 87%; float: left;">
-            <div class="layui-tab layui-tab-card" lay-filter="demo" style="height: 700px;">
-                <ul class="layui-tab-title">
-                    <li class="layui-this">演示说明</li>
-                    <li>标题一</li>
-                    <li>标题二</li>
-                    <li>标题三</li>
-                </ul>
-                <div class="layui-tab-content">
-                    <div class="layui-tab-item layui-show">
-                        在这里，你将以最直观的形式体验Layui！在编辑器中可以执行layui相关的一切代码。
-                        <br>你也可以点击左侧导航针对性地试验我们提供的示例。
-                    </div>
-                    <div class="layui-tab-item">内容1</div>
-                    <div class="layui-tab-item">内容2</div>
-                    <div class="layui-tab-item">内容3</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="/lib/layui/layui.js" charset="utf-8"></script>
-<script>
-    layui.use(['element', 'layer'], function(){
-        var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+<body class="main_body">
+	<div class="layui-layout layui-layout-admin">
+		<!-- 顶部 -->
+		<div class="layui-header header">
+			<div class="layui-main">
+				<a href="#" class="logo">layui后台管理</a>
+				<!-- 显示/隐藏菜单 -->
+				<a href="javascript:;" class="iconfont hideMenu icon-menu1"></a>
+				<!-- 搜索 -->
+				<div class="layui-form component">
+			        <select name="modules" lay-verify="required" lay-search="">
+						<option value="">直接选择或搜索选择</option>
+						<option value="1">layer</option>
+						<option value="2">form</option>
+						<option value="3">layim</option>
+						<option value="4">element</option>
+						<option value="5">laytpl</option>
+						<option value="6">upload</option>
+						<option value="7">laydate</option>
+						<option value="8">laypage</option>
+						<option value="9">flow</option>
+						<option value="10">util</option>
+						<option value="11">code</option>
+						<option value="12">tree</option>
+						<option value="13">layedit</option>
+						<option value="14">nav</option>
+						<option value="15">tab</option>
+						<option value="16">table</option>
+						<option value="17">select</option>
+						<option value="18">checkbox</option>
+						<option value="19">switch</option>
+						<option value="20">radio</option>
+			        </select>
+			        <i class="layui-icon">&#xe615;</i>
+			    </div>
+			    <!-- 天气信息 -->
+			    <div class="weather" pc>
+			    	<div id="tp-weather-widget"></div>
+					<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+					<script>tpwidget("init", {
+					    "flavor": "slim",
+					    "location": "WX4FBXXFKE4F",
+					    "geolocation": "enabled",
+					    "language": "zh-chs",
+					    "unit": "c",
+					    "theme": "chameleon",
+					    "container": "tp-weather-widget",
+					    "bubble": "disabled",
+					    "alarmType": "badge",
+					    "color": "#FFFFFF",
+					    "uid": "U9EC08A15F",
+					    "hash": "039da28f5581f4bcb5c799fb4cdfb673"
+					});
+					tpwidget("show");</script>
+			    </div>
+			    <!-- 顶部右侧菜单 -->
+			    <ul class="layui-nav top_menu">
+			    	<li class="layui-nav-item showNotice" id="showNotice" pc>
+						<a href="javascript:;"><i class="iconfont icon-gonggao"></i><cite>系统公告</cite></a>
+					</li>
+			    	<li class="layui-nav-item" mobile>
+			    		<a href="javascript:;" class="mobileAddTab" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>
+			    	</li>
+			    	<li class="layui-nav-item" mobile>
+			    		<a href="page/login/login.html"><i class="iconfont icon-loginout"></i> 退出</a>
+			    	</li>
+					<li class="layui-nav-item lockcms" pc>
+						<a href="javascript:;"><i class="iconfont icon-lock1"></i><cite>锁屏</cite></a>
+					</li>
+					<li class="layui-nav-item" pc>
+						<a href="javascript:;">
+							<img src="images/face.jpg" class="layui-circle" width="35" height="35">
+							<cite>请叫我马哥</cite>
+						</a>
+						<dl class="layui-nav-child">
+							<dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
+							<dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>
+							<dd><a href="javascript:;" class="changeSkin noAddTab"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>
+							<dd><a href="page/login/login.html" class="noAddTab"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 左侧导航 -->
+		<div class="layui-side layui-bg-black">
+			<div class="user-photo">
+				<a class="img" title="我的头像" ><img src="images/face.jpg"></a>
+				<p>你好！<span class="userName">请叫我马哥</span>, 欢迎登录</p>
+			</div>
+			<div class="navBar layui-side-scroll"></div>
+		</div>
+		<!-- 右侧内容 -->
+		<div class="layui-body layui-form">
+			<div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
+				<ul class="layui-tab-title top_tab" id="top_tabs">
+					<li class="layui-this" lay-id=""><i class="iconfont icon-computer"></i> <cite>后台首页</cite></li>
+				</ul>
+				<ul class="layui-nav closeBox">
+				  <li class="layui-nav-item">
+				    <a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="javascript:;" class="closePageOther"><i class="iconfont icon-prohibit"></i> 关闭其他</a></dd>
+				      <dd><a href="javascript:;" class="closePageAll"><i class="iconfont icon-guanbi"></i> 关闭全部</a></dd>
+				    </dl>
+				  </li>
+				</ul>
+				<div class="layui-tab-content clildFrame">
+					<div class="layui-tab-item layui-show">
+						<iframe src="page/main.html"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="layui-footer footer">
+			<p>copyright @2017 请叫我马哥　　<a onclick="donation()" class="layui-btn layui-btn-danger l·ayui-btn-small">捐赠作者</a></p>
+		</div>
+	</div>
+	
+	<!-- 移动导航 -->
+	<div class="site-tree-mobile layui-hide"><i class="layui-icon">&#xe602;</i></div>
+	<div class="site-mobile-shade"></div>
 
-        //监听导航点击
-        element.on('nav(demo)', function(elem){
-            //console.log(elem)
-            layer.msg(elem.text());
-        });
-    });
-</script>
+	<script type="text/javascript" src="/layui/layui.js"></script>
+	<script type="text/javascript" src="/js/leftNav.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+</body>
 </html>
