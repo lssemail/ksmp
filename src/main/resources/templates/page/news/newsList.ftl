@@ -65,7 +65,11 @@
 		</table>
 	</div>
 	<div id="page"></div>
-	<script type="text/javascript" src="../../layui/layui.js"></script>
-	<script type="text/javascript" src="newsList.js"></script>
+	<script type="text/javascript" src="/layui/layui.js"></script>
+	<script>
+        layui.config({
+            base: '/js/modules/'
+        }).use('newsList');
+	</script>
 </body>
 </html>
